@@ -44,9 +44,6 @@ jobs:
       - run:
           name: Install Dependencies
           command: cd examples/AlanBasicExample && npm install
-      # - run:
-          # name: Add platfrom Android
-          # command: cd examples/AlanFoodDelivery && ionic cordova platform add android@8.0.0
       - run:
           name: Build Cordova app for Android
           command: cd examples/AlanBasicExample && cordova build android
@@ -54,57 +51,52 @@ jobs:
           key: node-modules-cache
           paths:
             - ./node_modules
-  # build_ios:
-  #   macos:
-  #     xcode: 11.3.0
-  #   steps:
-  #     - checkout
-  #     - node/install:
-  #        install-yarn: true
-  #        install-npm: true
-  #        node-version: 10.22.0
-  #     - run: node --version
-  #     - run:
-  #         name: decode Certificates
-  #         command: base64 -D -o Certificates.p12 \<<< $Certificates
-  #     - run:
-  #         name: make Provisioning Profiles directory
-  #         command: mkdir -pv ~/Library/MobileDevice/Provisioning\ Profiles/
-  #     - run:
-  #         name: decode Provisioning Profiles
-  #         command: base64 -D -o ~/Library/MobileDevice/Provisioning\ Profiles/App_Store.mobileprovision \<<< $App_Store_Profile
-  #     - run: bundle exec fastlane clean
-  #     - restore_cache:
-  #         keys:
-  #           - node-modules-cache
-  #     - run:
-  #         name: Install Ionic and Cordova
-  #         command: sudo npm install -g cordova ionic 
-  #     - run:
-  #         name: export path
-  #         command: echo 'export PATH="$PATH:/usr/local/bin"' >> $BASH_ENV 
-  #     - run:
-  #         name: Install Dependencies
-  #         command: cd examples/AlanFoodDelivery && npm install
-  #     - run:
-  #         name: Copy plugins
-  #         command: mkdir -p examples/AlanFoodDelivery/plugins && cp -a examples/AlanFoodDelivery/node_modules/@alan-ai/cordova-plugin-alan-voice examples/AlanFoodDelivery/plugins
-  #     - run:
-  #         name: Add platfrom iOS
-  #         command: cd examples/AlanFoodDelivery && ionic cordova platform remove android && ionic cordova platform remove ios && ionic cordova platform add ios
-  #     - run:
-  #         name: Build Ionic Food Delivery for iOS
-  #         command: cd examples/AlanFoodDelivery && ionic cordova build ios
-  #     - save_cache:
-  #         key: node-modules-cache
-  #         paths:
-  #           - ./node_modules
+  build_ios:
+    macos:
+      xcode: 11.3.0
+    steps:
+      - checkout
+      - node/install:
+         install-yarn: true
+         install-npm: true
+         node-version: 10.22.0
+      - run: node --version
+      - run:
+          name: decode Certificates
+          command: base64 -D -o Certificates.p12 \<<< $Certificates
+      - run:
+          name: make Provisioning Profiles directory
+          command: mkdir -pv ~/Library/MobileDevice/Provisioning\ Profiles/
+      - run:
+          name: decode Provisioning Profiles
+          command: base64 -D -o ~/Library/MobileDevice/Provisioning\ Profiles/App_Store.mobileprovision \<<< $App_Store_Profile
+      - run: bundle exec fastlane clean
+      - restore_cache:
+          keys:
+            - node-modules-cache
+      - run:
+          name: Install Ionic and Cordova
+          command: sudo npm install -g cordova ionic 
+      - run:
+          name: export path
+          command: echo 'export PATH="$PATH:/usr/local/bin"' >> $BASH_ENV 
+      - run:
+          name: Install Dependencies
+          command: cd examples/AlanBasicExample && npm install
+      - run:
+          name: Add platfrom iOS
+          command: cd examples/AlanBasicExample && cordova platform remove android && cordova platform remove ios && cordova platform add ios
+      - run:
+          name: Build Ionic Food Delivery for iOS
+          command: cd examples/AlanBasicExample && cordova build ios
+      - save_cache:
+          key: node-modules-cache
+          paths:
+            - ./node_modules
             
 workflows:
   version: 2.1
   build-android-and-ios:
     jobs:
       - build_android
-      # - build_ios
-
-    
+      - build_ios
