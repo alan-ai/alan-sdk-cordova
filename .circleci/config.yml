@@ -75,8 +75,8 @@ jobs:
           keys:
             - node-modules-cache
       - run:
-          name: Install Ionic and Cordova
-          command: sudo npm install -g cordova ionic 
+          name: Install Cordova
+          command: sudo npm install -g cordova 
       - run:
           name: export path
           command: echo 'export PATH="$PATH:/usr/local/bin"' >> $BASH_ENV 
@@ -87,7 +87,7 @@ jobs:
           name: Add platfrom iOS
           command: cd examples/AlanBasicExample && cordova platform remove android && cordova platform remove ios && cordova platform add ios
       - run:
-          name: Build Ionic Food Delivery for iOS
+          name: Build AlanBasicExample for iOS
           command: cd examples/AlanBasicExample && cordova build ios
       - save_cache:
           key: node-modules-cache
