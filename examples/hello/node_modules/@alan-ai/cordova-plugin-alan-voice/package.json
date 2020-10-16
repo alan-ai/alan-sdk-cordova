@@ -1,0 +1,64 @@
+{
+  "_from": "@alan-ai/cordova-plugin-alan-voice",
+  "_id": "@alan-ai/cordova-plugin-alan-voice@1.6.0",
+  "_inBundle": false,
+  "_integrity": "sha512-6iPyFxriwA2uq+EFuSrMLy/sPj5B/LQ2wP3y4tiKb4DL8J03gQt/O64yXevTqbUSYCbgwrYoXrP/0EN7EzMkPw==",
+  "_location": "/@alan-ai/cordova-plugin-alan-voice",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@alan-ai/cordova-plugin-alan-voice",
+    "name": "@alan-ai/cordova-plugin-alan-voice",
+    "escapedName": "@alan-ai%2fcordova-plugin-alan-voice",
+    "scope": "@alan-ai",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@alan-ai/cordova-plugin-alan-voice/-/cordova-plugin-alan-voice-1.6.0.tgz",
+  "_shasum": "6b732487b8a9eaee7d315b043a38206cfad5c861",
+  "_spec": "@alan-ai/cordova-plugin-alan-voice",
+  "_where": "/Users/alekseymakarkin/AndroidProjects/Alan/hello",
+  "author": "",
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-alan-voice",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "Alan Voice Cordova plugin",
+  "keywords": [
+    "voice ai",
+    "conversational ai",
+    "chatbot",
+    "voice",
+    "ai",
+    "conversational",
+    "nlp",
+    "natural language",
+    "dialogs",
+    "dialog flow",
+    "enterprise ai",
+    "voice assistant",
+    "voice development",
+    "add voice to your app",
+    "voice interface",
+    "alan voice",
+    "alan ai",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android",
+    "alan-sdk"
+  ],
+  "license": "MIT",
+  "name": "@alan-ai/cordova-plugin-alan-voice",
+  "version": "1.6.0"
+}

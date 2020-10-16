@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-alan-voice" version="1.6.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <name>AlanVoice</name>
+  <js-module name="AlanVoice" src="www/AlanVoice.js"><clobbers target="AlanVoice" /></js-module>
+  <hook type="before_plugin_install" src="scripts/set_version_hook.js" />
+  <platform name="ios">
+    <config-file parent="/*" target="config.xml">
+      <feature name="alanVoice">
+        <param name="ios-package" value="AlanVoice" />
+      </feature>
+    </config-file>
+    <framework src="src/ios/AlanSDK.framework" custom="true" embed="true" />
+    <header-file src="src/ios/AlanVoice.h" />
+    <header-file src="src/ios/AlanVersion.h" />
+    <source-file src="src/ios/AlanVoice.m" />
+  </platform>
+  <platform name="android">
+      <config-file parent="/*" target="res/xml/config.xml">
+         <feature name="alanVoice">
+            <param name="android-package" value="cordova.plugin.alan.AlanVoice" />
+            <param name="onload" value="true" />
+         </feature>
+      </config-file>
+      <config-file parent="/*" target="AndroidManifest.xml" />
+      <source-file src="src/android/AlanVoice.java" target-dir="src/cordova/plugin/alan/" />
+      <source-file src="src/android/Version.java" target-dir="src/cordova/plugin/alan/" />
+      <source-file src="src/android/AlanCallbackWrapper.java" target-dir="src/cordova/plugin/alan/" />
+      <framework src="src/android/alan_voice.gradle" custom="true" type="gradleReference"/>
+   </platform>
+</plugin>
