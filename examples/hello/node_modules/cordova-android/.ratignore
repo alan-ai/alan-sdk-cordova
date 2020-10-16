@@ -1,9 +1,0 @@
-*.properties
-bin
-gen
-proguard-project.txt
-spec
-appveyor.yml
-framework/build
-ic_launcher.png
-build
