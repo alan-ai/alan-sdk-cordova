@@ -8,6 +8,13 @@
 
 Add a voice assistant to your application. With no or minimal changes to the existing UI.
 
+## How to start
+
+To add voice to an Apache Cordova application:
+1. [Sign up for Alan Studio](https://studio.alan.app/register) to build and test voice scripts in JavaScript.
+2. Use the Alan Cordova SDK to embed the Alan button to your application. For details, see [Alan AI documentation](https://alan.app/docs/client-api/cross-platform/cordova).
+
+
 ## Example  apps
 
 In the [Examples](https://github.com/alan-ai/alan-sdk-cordova/tree/master/examples/) folder, you can find example apps integrated with the Alan voice SDK for Cordova. Launch the app, tap the Alan button and start giving voice commands. For example, you can ask: "Hello" or "What does this app do?"
