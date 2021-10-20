@@ -78,16 +78,16 @@ jobs:
             - node-modules-cache
       - run:
           name: Install Cordova
-          command: sudo npm install -g cordova 
-      - run:
-          name: Fix cordova access
-          command: sudo chown -R 777 /Users/distiller/.config/configstore/cordova-config.json          
+          command: sudo npm install -g cordova           
       - run:
           name: export path
           command: echo 'export PATH="$PATH:/usr/local/bin"' >> $BASH_ENV 
       - run:
           name: Install Dependencies
           command: cd examples/AlanBasicExample && npm install
+      - run:
+          name: Fix cordova access
+          command: sudo chown -R 777 /Users/distiller/.config/configstore/cordova-config.json
       - run:
           name: Add platfrom iOS
           command: cd examples/AlanBasicExample && cordova platform remove android && cordova platform remove ios && cordova platform add ios
