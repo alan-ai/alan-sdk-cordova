@@ -81,7 +81,7 @@ jobs:
           command: sudo npm install -g cordova 
       - run:
           name: Fix cordova access
-          command: sudo chown -R 777 /Users/distiller/.config/configstore/          
+          command: sudo chown -R 777 /Users/distiller/.config/configstore/cordova-config.json          
       - run:
           name: export path
           command: echo 'export PATH="$PATH:/usr/local/bin"' >> $BASH_ENV 
