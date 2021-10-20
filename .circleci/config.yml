@@ -59,6 +59,9 @@ jobs:
       - node/install:
          node-version: 10.22.0
       - run: node --version
+      - run:
+          name: Install npm
+          command: npm install -g npm@6.14.6
       - run: npm --version
       - run:
           name: decode Certificates
