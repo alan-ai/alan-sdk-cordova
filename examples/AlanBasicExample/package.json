@@ -17,6 +17,7 @@
     "cordova-android": "^8.1.0"
   },
   "devDependencies": {
+    "cordova-ios": "^6.2.0",
     "cordova-plugin-whitelist": "^1.3.4"
   },
   "cordova": {
@@ -25,7 +26,8 @@
       "cordova-plugin-alan-voice": {}
     },
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   }
 }

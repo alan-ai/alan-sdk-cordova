@@ -86,11 +86,8 @@ jobs:
           name: Install Dependencies
           command: cd examples/AlanBasicExample && npm install
       - run:
-          name: Add platfrom iOS
-          command: sudo cd examples/AlanBasicExample && cordova platform add ios
-      - run:
           name: Build AlanBasicExample for iOS
-          command: sudo cd examples/AlanBasicExample && cordova build ios
+          command: cd examples/AlanBasicExample && cordova build ios
       - save_cache:
           key: node-modules-cache
           paths:
