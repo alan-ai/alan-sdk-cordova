@@ -86,11 +86,8 @@ jobs:
           name: Install Dependencies
           command: cd examples/AlanBasicExample && npm install
       - run:
-          name: Fix cordova access
-          command: sudo chown -R 777 /Users/distiller/.config/configstore/cordova-config.json
-      - run:
           name: Add platfrom iOS
-          command: cd examples/AlanBasicExample && cordova platform remove android && cordova platform remove ios && cordova platform add ios
+          command: cd examples/AlanBasicExample && cordova platform add ios
       - run:
           name: Build AlanBasicExample for iOS
           command: cd examples/AlanBasicExample && cordova build ios
