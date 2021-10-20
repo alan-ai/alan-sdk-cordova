@@ -57,7 +57,6 @@ jobs:
     steps:
       - checkout
       - node/install:
-         install-yarn: true
          install-npm: true
          node-version: 10.22.0
       - run: node --version
