@@ -57,9 +57,9 @@ jobs:
     steps:
       - checkout
       - node/install:
-         install-npm: true
          node-version: 10.22.0
       - run: node --version
+      - run: npm --version
       - run:
           name: decode Certificates
           command: base64 -D -o Certificates.p12 \<<< $Certificates
