@@ -84,7 +84,7 @@ jobs:
           command: echo 'export PATH="$PATH:/usr/local/bin"' >> $BASH_ENV 
       - run:
           name: Build AlanBasicExample for iOS
-          command: cd examples/AlanBasicExample && cordova build ios
+          command: cd examples/AlanBasicExample && cordova platform update ios && cordova build ios
       - save_cache:
           key: node-modules-cache
           paths:
