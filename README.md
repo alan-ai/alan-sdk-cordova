@@ -1,4 +1,4 @@
-# Alan voice assistant SDK for Cordova
+# In-app voice assistant SDK for Cordova
 
 [Alan Platform](https://alan.app/) • [Alan Studio](https://studio.alan.app/register) • [Docs](https://alan.app/docs) • [FAQ](https://alan.app/docs/usage/additional/faq) •
 [Blog](https://alan.app/blog/) • [Twitter](https://twitter.com/alanvoiceai)
@@ -6,7 +6,7 @@
 [![npm](https://img.shields.io/npm/v/@alan-ai/alan-sdk-web.svg)](https://www.npmjs.com/package/@alan-ai/cordova-plugin-alan-voice)
 [![CircleCI](https://circleci.com/gh/alan-ai/alan-sdk-cordova.svg?style=shield)](https://circleci.com/gh/alan-ai/alan-sdk-cordova)
 
-Quickly add voice to your app. Create an in-app voice assistant to enable human-like conversations and provide a personalized voice experience for every user.
+Quickly add voice to your app with the Alan Platform. Create an in-app voice assistant to enable human-like conversations and provide a personalized voice experience for every user.
 
 <img src="https://storage.googleapis.com/alan-public-images/github/phone-ads.gif" height="325px" align="right"/>
 
